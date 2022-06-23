@@ -1,15 +1,15 @@
 # This file allows users to call find_package(Polly) and pick up our targets.
 
 find_package(LLVM REQUIRED CONFIG
-             HINTS "/buildbot/src/android/llvm-r416183/out/windows-x86-64/lib64/cmake/llvm")
+             HINTS "/home/share.dir/tmp_bakup_users/maoh/riscv-llvm-src/out/windows-x86-64/lib64/cmake/llvm")
 
 set(Polly_CMAKE_DIR ${CMAKE_CURRENT_LIST_DIR})
 set(Polly_BUNDLED_ISL ON)
 set(Polly_ENABLE_GPGPU_CODEGEN OFF)
 
 set(Polly_DEFINITIONS ${LLVM_DEFINITIONS})
-set(Polly_INCLUDE_DIRS /buildbot/src/android/llvm-r416183/out/windows-x86-64-install/include;/buildbot/src/android/llvm-r416183/out/windows-x86-64-install/include/polly ${LLVM_INCLUDE_DIRS})
-set(Polly_LIBRARY_DIRS /buildbot/src/android/llvm-r416183/out/windows-x86-64-install/lib64)
+set(Polly_INCLUDE_DIRS /home/share.dir/tmp_bakup_users/maoh/riscv-llvm-src/out/windows-x86-64-install/include;/home/share.dir/tmp_bakup_users/maoh/riscv-llvm-src/out/windows-x86-64-install/include/polly ${LLVM_INCLUDE_DIRS})
+set(Polly_LIBRARY_DIRS /home/share.dir/tmp_bakup_users/maoh/riscv-llvm-src/out/windows-x86-64-install/lib64)
 set(Polly_EXPORTED_TARGETS Polly;PollyISL)
 set(Polly_LIBRARIES ${LLVM_LIBRARIES} ${Polly_EXPORTED_TARGETS})
 
